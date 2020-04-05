@@ -1,6 +1,9 @@
 @use 'colors'
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
-    
+@import url('https://fonts.googleapis.com/css?family=Caveat|Sen&display=swap')
+
+$mar: .5rem
+$pad: .5rem
+
 =flexbox()
     display: -webkit-box
     display: -moz-box
@@ -21,7 +24,8 @@ html
 
 
 body
-    font-family: 'Noto Sans', sans-serif
+    font-family: 'Sen', sans-serif
+    padding: 0 3rem 0 3rem
 
 .c-name
     +flexbox()
@@ -31,10 +35,13 @@ body
     width: 100%
     height: 100%
     .language-btn
-        background-color: colors.$three
+        background-color: colors.$two
         color: colors.$pale
         padding: .5rem
+        margin: .5rem
         font-size: 1.5rem
+        border-radius: .5rem
+        box-shadow: .1rem .2rem .3rem #000000bb
     .circle
         +flexbox()
         z-index: 10
@@ -45,52 +52,28 @@ body
         justify-content: center
         align-items: center
         .name  
+            font-family: 'Caveat', cursive
             color: colors.$pale
-            font-size: 2rem
+            font-size: 2.5rem
             text-align: center
-
-=quadrant()
-    display: grid
-    z-index: 1
-    width: 50%
-    align-items: center
-    .content
-        $hp: 3rem
-        color: colors.$three
-        text-align: justify
-        padding-right: $hp
-        padding-left: $hp
         
         
 
 .c-quadrants
-    +flexbox()
+    display: grid
+    grid-template-columns: 66% 33%
     flex-wrap: wrap
     width: 100%
     height: 100%
-    .t-left
-        +quadrant()
-        padding-top: 3rem
-    
-    .t-right
-        +quadrant()
-        padding-top: 3rem
-    
-    .b-left
-        +quadrant()
-        padding-bottom: 3rem
-
-    .b-right
-        +quadrant()
-        padding-bottom: 3rem
-
+    .content 
+        margin: $mar
 
 .title
     $vertical_padding: .4rem
-    background-color: colors.$two
+    background-color: colors.$three
     color: colors.$pale
     padding-left: 1rem
-    font-size: 2rem
+    font-size: 2.2rem
     padding-top: $vertical_padding
     padding-bottom: $vertical_padding
 
@@ -110,14 +93,26 @@ body
     padding-left: 2rem
     padding-right: 1rem
 
+
 .place
-    $mar: .5rem
-    $pad: 1rem
     margin-top: $mar
     margin-bottom: $mar
     padding: $pad $pad $pad $pad 
     background-color: colors.$pale-a 
 
+
+.technology
+    font-size: 1.2rem
+    font-weight: bold
+    margin-top: $mar
+    margin-bottom: $mar
+    padding: $pad $pad $pad $pad 
+    background-color: colors.$pale-a 
+    .framework
+        font-size: 1rem
+        font-weight: normal
+        padding-left: 2rem
+            
 
 .horizontal-list
     +flexbox()
@@ -132,3 +127,10 @@ body
 a
     color: colors.$two
     text-decoration: none
+
+
+.icon
+    max-width: 5rem
+    max_height: 5rem
+    min-height: 3rem
+    min-height: 3rem
