@@ -1,0 +1,144 @@
+:root {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/static/desert-road.jpg);
+}
+
+.c-name {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.c-name .circle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  z-index: 10;
+  border-radius: 50%;
+  background-color: #383508;
+  height: 8rem;
+  width: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+.c-name .circle .name {
+  color: #e4eaea;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.c-quadrants {
+  position: absolute;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.c-quadrants .t-left {
+  display: grid;
+  z-index: 1;
+  width: 50%;
+  align-items: center;
+}
+.c-quadrants .t-left .content {
+  color: #383508;
+  padding: 3rem;
+  text-align: justify;
+}
+.c-quadrants .t-right {
+  display: grid;
+  z-index: 1;
+  width: 50%;
+  align-items: center;
+}
+.c-quadrants .t-right .content {
+  color: #383508;
+  padding: 3rem;
+  text-align: justify;
+}
+.c-quadrants .b-left {
+  display: grid;
+  z-index: 1;
+  width: 50%;
+  align-items: center;
+}
+.c-quadrants .b-left .content {
+  color: #383508;
+  padding: 3rem;
+  text-align: justify;
+}
+.c-quadrants .b-right {
+  display: grid;
+  z-index: 1;
+  width: 50%;
+  align-items: center;
+}
+.c-quadrants .b-right .content {
+  color: #383508;
+  padding: 3rem;
+  text-align: justify;
+}
+
+.title {
+  background-color: #ae621f;
+  color: #e4eaea;
+  padding-left: 1rem;
+  font-size: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.company {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.position {
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.parragraph {
+  text-align: justify;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.place {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #e4eaea;
+}
+
+.horizontal-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}

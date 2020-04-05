@@ -1,0 +1,134 @@
+@use 'colors'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
+    
+=flexbox()
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+:root
+    font-size: 18px
+
+
+html
+    background: url('../static/images/desert_01.jpg') no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+
+body
+    font-family: 'Noto Sans', sans-serif
+
+.c-name
+    +flexbox()
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    .language-btn
+        background-color: colors.$three
+        color: colors.$pale
+        padding: .5rem
+        font-size: 1.5rem
+    .circle
+        +flexbox()
+        z-index: 10
+        border-radius: 50%
+        background-color: colors.$four
+        height: 12rem
+        width: 12rem
+        justify-content: center
+        align-items: center
+        .name  
+            color: colors.$pale
+            font-size: 2rem
+            text-align: center
+
+=quadrant()
+    display: grid
+    z-index: 1
+    width: 50%
+    align-items: center
+    .content
+        $hp: 3rem
+        color: colors.$three
+        text-align: justify
+        padding-right: $hp
+        padding-left: $hp
+        
+        
+
+.c-quadrants
+    +flexbox()
+    flex-wrap: wrap
+    width: 100%
+    height: 100%
+    .t-left
+        +quadrant()
+        padding-top: 3rem
+    
+    .t-right
+        +quadrant()
+        padding-top: 3rem
+    
+    .b-left
+        +quadrant()
+        padding-bottom: 3rem
+
+    .b-right
+        +quadrant()
+        padding-bottom: 3rem
+
+
+.title
+    $vertical_padding: .4rem
+    background-color: colors.$two
+    color: colors.$pale
+    padding-left: 1rem
+    font-size: 2rem
+    padding-top: $vertical_padding
+    padding-bottom: $vertical_padding
+
+.company
+    padding-left: 1rem
+    padding-right: 1rem
+    font-size: 1.6rem
+
+.position
+    font-weight: bold
+    padding-left: 1rem
+    padding-right: 1rem
+    font-size: 1.3rem
+
+.parragraph
+    text-align: justify
+    padding-left: 2rem
+    padding-right: 1rem
+
+.place
+    $mar: .5rem
+    $pad: 1rem
+    margin-top: $mar
+    margin-bottom: $mar
+    padding: $pad $pad $pad $pad 
+    background-color: colors.$pale-a 
+
+
+.horizontal-list
+    +flexbox()
+    flex-wrap: wrap
+    justify-content: center
+    $horizontal-padding: 3rem
+    padding-top: .5rem
+    padding-bottom: .5rem
+    padding-left: $horizontal-padding
+    padding-right: $horizontal-padding
+
+a
+    color: colors.$two
+    text-decoration: none
