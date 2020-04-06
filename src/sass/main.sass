@@ -27,7 +27,13 @@ body
     font-family: 'Sen', sans-serif
     padding: 0 3rem 0 3rem
 
-.c-name
+
+a
+    color: colors.$two
+    text-decoration: none
+    font-weight: bold
+
+.header
     +flexbox()
     flex-direction: row
     justify-content: center
@@ -47,26 +53,30 @@ body
         z-index: 10
         border-radius: 50%
         background-color: colors.$four
-        height: 12rem
-        width: 12rem
+        height: 11rem
+        width: 11rem
         justify-content: center
         align-items: center
+        box-shadow: .2rem .2rem .3rem #00000055
         .name  
             font-family: 'Caveat', cursive
             color: colors.$pale
             font-size: 2.5rem
             text-align: center
+    .personal-info
+        box-shadow: .2rem .2rem .3rem #000000bb
+        background-color: colors.$two
+        color: colors.$pale
+        padding: 1rem
+        margin: 1rem
+        a
+            font-weight: bold
+            color: colors.$four
         
-        
-
 .c-quadrants
     display: grid
     grid-template-columns: 66% 33%
-    flex-wrap: wrap
-    width: 100%
-    height: 100%
-    .content 
-        margin: $mar
+
 
 .title
     $vertical_padding: .4rem
@@ -77,60 +87,102 @@ body
     padding-top: $vertical_padding
     padding-bottom: $vertical_padding
 
-.company
-    padding-left: 1rem
-    padding-right: 1rem
-    font-size: 1.6rem
-
-.position
-    font-weight: bold
-    padding-left: 1rem
-    padding-right: 1rem
-    font-size: 1.3rem
-
-.parragraph
+=content()
+    margin: .2rem
+    padding: $pad $pad $pad $pad 
+    overflow-wrap: break-word
     text-align: justify
-    padding-left: 2rem
-    padding-right: 1rem
+    
 
-
-.place
-    margin-top: $mar
-    margin-bottom: $mar
-    padding: $pad $pad $pad $pad 
-    background-color: colors.$pale-a 
-
-
-.technology
-    font-size: 1.2rem
-    font-weight: bold
-    margin-top: $mar
-    margin-bottom: $mar
-    padding: $pad $pad $pad $pad 
-    background-color: colors.$pale-a 
-    .framework
-        font-size: 1rem
-        font-weight: normal
-        padding-left: 2rem
+.experiences
+    +content()
+    .experience
+        margin: .5rem 0 .5rem 0
+        background-color: colors.$pale-a
+        padding: 1rem
+        .company
+            padding-left: 1rem
+            padding-right: 1rem
+            font-size: 1.6rem
+        .position
+            font-weight: bold
+            padding-left: 1rem
+            padding-right: 1rem
+            font-size: 1.3rem
+        .parragraph
+            text-align: justify
+            padding-left: 2rem
+            padding-right: 1rem
+        .technologies
+            +flexbox()
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+            .tech
+                margin: 0px
+               
+           
+.skills
+    +content()
+    .technologies
+        +flexbox()
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        .technology
+            +flexbox()
+            font-size: 1.2rem
+            font-weight: bold
+            margin: .2rem
+            padding: $pad $pad $pad $pad 
+            background-color: colors.$pale-a 
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            .framework
+                flex-direction: row
+                font-size: .8rem
+                font-weight: normal
+                padding-left: .2rem
             
 
-.horizontal-list
-    +flexbox()
-    flex-wrap: wrap
-    justify-content: center
-    $horizontal-padding: 3rem
-    padding-top: .5rem
-    padding-bottom: .5rem
-    padding-left: $horizontal-padding
-    padding-right: $horizontal-padding
+.education
+    +content()
+    .courses
+        .course
+            .title
+                margin: .5rem 0 .5rem 0
+                background: colors.$pale-a
+                color: colors.$four
+                font-size: 1.2rem
+                .link
+                    font-size: 1rem
+                .academy
+                    font-size: 1rem
+                .location
+                    font-size: 1rem
+            
+.code_samples
+    +content()
+    .codes
+        .code
+            padding: 1rem
+            background-color: colors.$pale-a
+            margin: .5rem 0 .5rem 0
+            .link
+                margin: 0px
+            .description
+                margin: 0px
 
-a
-    color: colors.$two
-    text-decoration: none
 
-
-.icon
-    max-width: 5rem
-    max_height: 5rem
-    min-height: 3rem
-    min-height: 3rem
+.icons
+    display: grid 
+    grid-template-columns: 25% 25% 25% 25%
+    justify-items: center
+    align-items: center
+    .icon
+        max-width: 5rem
+        max_height: 5rem
+        min-height: 3rem
+        min-height: 3rem

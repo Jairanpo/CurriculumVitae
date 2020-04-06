@@ -17,17 +17,16 @@ var development = {
     }
 }
 
+
 var development_build = {
     mode: "development",
     entry: path.resolve(__dirname.replace("config", ""), "src", "index.js"),
     output: {
         path: path.resolve(__dirname.replace("config", ""), "dist"),
         filename: 'bundle.js'
-    },
-    devServer: {
-        hot: true
     }
 }
+
 
 var production = {
     mode: "production",

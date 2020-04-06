@@ -1,6 +1,5 @@
 "use strict";
 
-
 var content = {
   experience: {
     title: {
@@ -62,14 +61,15 @@ var content = {
                     </div>
                 `,
         tecnologies: [
+          "Unity",
           "Python",
           "Javascript",
           "Webpack",
-          "Qt",
-          "Mikrotic",
+          "Vue",
+          "React",
           "Houdini",
-          "Maya",
-          "Redshift"
+          "Blender",
+          "Wordpress"
         ]
       },
 
@@ -150,7 +150,7 @@ var content = {
                     </div>`,
         position: `
                     <div class="position">
-                        Layout and Tecnical Artist
+                        Layout and Technical Artist
                     </div>
                 `,
         description: `<div class="parragraph">
@@ -168,10 +168,10 @@ var content = {
 };
 
 var html = /*html*/ `
-<div class="content">
+  <div class="experiences">
     ${content.experience.title.en}
     ${experience(content.experience.places)}
-</div>
+  </div>
 `;
 
 module.exports = html;
@@ -182,11 +182,11 @@ function experience(list_of_places) {
   var result = "";
 
   list_of_places.forEach(function append(element) {
-    result += `<div class="place">
+    result += `<div class="experience">
                 ${element.place}
                 ${element.position}
                 ${element.description}
-                ${tecnologies(element.tecnologies, "div", "tecnologies")}
+                ${tecnologies(element.tecnologies, "div", "tech")}
             </div>
         `;
   });
@@ -194,7 +194,7 @@ function experience(list_of_places) {
 }
 
 function tecnologies(list_of_strings, tag, class_name) {
-  var result = '<div class="horizontal-list">';
+  var result = '<div class="technologies">';
   list_of_strings.forEach(function(element, index) {
     if (index != list_of_strings.length - 1) {
       result += `

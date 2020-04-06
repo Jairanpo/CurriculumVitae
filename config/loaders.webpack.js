@@ -70,8 +70,18 @@ var dev_build = {
         use: ["html-loader"]
       },
       {
-        test: /\.(jpg|png)$/,
-        use: ["file-loader"]
+        test: /\.(png|jpe?g)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              outputPath: "images",
+              publicPath: "images",
+              name: "[name].[ext]"
+            }
+          }
+        ]
       },
       {
         test: /\.sass$/i,
@@ -99,9 +109,23 @@ var pro = {
         use: ["html-loader"]
       },
       {
+        test: /\.(png|jpe?g)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              outputPath: "images",
+              publicPath: "images",
+              name: "[name].[ext]"
+            }
+          }
+        ]
+      },
+      {
         test: /\.sass$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "sass-loader",
