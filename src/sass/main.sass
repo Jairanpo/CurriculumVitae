@@ -84,7 +84,14 @@ video
         .name  
             font-family: 'Caveat', cursive
             color: colors.$pale
-            font-size: 5rem
+            +mediaQueries.responsive(big-desktop)
+                font-size: 5rem
+            +mediaQueries.responsive(desktop)
+                font-size: 5rem
+            +mediaQueries.responsive(tab)
+                font-size: 3rem
+            +mediaQueries.responsive(phone)
+                font-size: 3rem
             text-align: center
     .personal-info
         z-index: 10
@@ -137,7 +144,6 @@ video
         z-index: 10
     .b-right
         z-index: 10
-
 
 
 .title

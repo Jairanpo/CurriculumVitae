@@ -50,8 +50,8 @@ var content = {
                 </div>
             `,
                 description: `<div class="parragraph">
-                    Since the begining of my carrer I have been working on very distinct projects that
-                    range from web|app|videogames development and as a CG artist. <br>
+                    Since the begining of my carrer I have been working on several projects
+                    ranging from from web|app|videogames development and as a CG artist. <br>
                     <ul style="margin:0">
                     <li><a href=https://laepocafilm.com target="_blank" rel="noopener noreferrer"/>La Epoca</a></li> 
                     <li><a href=https://www.youtube.com/watch?v=RevcANUqVBg target="_blank" rel="noopener noreferrer">Ghost Apocalypse</a></li>
@@ -83,12 +83,12 @@ var content = {
                     </div>
                 `,
                 description: `<div class="parragraph">
-                    I develop the backend side of a RestAPI service,
-                    and deploy the database designed for it. 
-                    This service provide information about articles, 
+                    I developed the backend side of a RestAPI service,
+                    and deployed the database designed for it. 
+                    This service provides information about articles, 
                     courses and events related with technology as well
                     as services like authentication, registration, security.<br>
-                    On the frontend side, I help the team with the frontend
+                    On the frontend side, I helped the team with the frontend
                     architecture, client side requests and security protocols.
                     <ul style="margin:0">
                      <li><a href=https://apps.apple.com/us/app/talent-republic/id1450277102 target="_blank" rel="noopener noreferrer">Republic</a></li>
@@ -122,7 +122,7 @@ var content = {
                     <ul style="margin-top:0">
                         <li>Creating tools for the cinematography team and using several CG and VFX APIs.</li>
                         <li>Cloth simulation system on top of nCloth system to improve delivery times for the VFX department.</li>
-                        <li>Use of linear algebra to solve problems in the 3D environments.</li>
+                        <li>Use of linear algebra to solve problems in 3D environments.</li>
                         <li>Verify and automate data transference from the cinematography department.</li>
                         <li>Automatic rigging with focus on performance to help the staging and ease the task of analazing the flow of the editing process.</li>
                         <li>Stage and camera artist.</li>
@@ -153,8 +153,8 @@ var content = {
                     </div>
                 `,
                 description: `<div class="parragraph">
-                    I collaborate as an artist working on the ciematography for the film Salma's Big Wish,
-                    also develop scripts that automate processes for the team.
+                    I collaborated as an artist working on the ciematography for the film Salma's Big Wish,
+                    also developed scripts that automate processes for the team.
                     <ul style="margin:0">
                      <li><a href=https://www.youtube.com/watch?v=Mrmf6DsNzqA target="_blank" rel="noopener noreferrer">Salma's Big Wish</a></li>
                     </ul>
