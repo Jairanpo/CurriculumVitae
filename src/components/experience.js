@@ -101,7 +101,7 @@ var content = {
                     "Houdini",
                     "Webpack",
                     "Qt",
-                    "Mikrotic",
+                    "MikroTik",
                     "Maya",
                     "Redshift"
                 ]
