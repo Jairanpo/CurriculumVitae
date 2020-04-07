@@ -1,7 +1,7 @@
 {
     "name": "CV",
     "scripts": {
-        "css": "sass /scr/sass:css",
+        "css": "sass sass:css",
         "merge": "babel-node ./webpack.config.js --env.mode=dev",
         "build": "webpack --env.mode=dev_build --config webpack.config.js --display-error-details",
         "pro": "webpack --env.mode=pro --config webpack.config.js --display-error-details",

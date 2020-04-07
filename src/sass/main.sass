@@ -1,5 +1,7 @@
 @use 'colors'
+@use 'mediaQueries'
 @import url('https://fonts.googleapis.com/css?family=Caveat|Sen&display=swap')
+
 
 $mar: .5rem
 $pad: .5rem
@@ -25,9 +27,15 @@ html
 
 body
     font-family: 'Sen', sans-serif
-    padding: 0 3rem 0 3rem
-
-
+    +mediaQueries.responsive(big-desktop)
+        padding: 0 3rem 0 3rem
+    +mediaQueries.responsive(desktop)
+        padding: 0 3rem 0 3rem
+    +mediaQueries.responsive(tab)
+        padding: 0 .5rem 0 .5rem
+    +mediaQueries.responsive(phone)
+        padding: 0
+    
 a
     color: colors.$two
     text-decoration: none
@@ -35,6 +43,15 @@ a
 
 .header
     +flexbox()
+    +mediaQueries.responsive(big-desktop)
+        flex-direction: row
+    +mediaQueries.responsive(desktop)
+        flex-direction: row
+    +mediaQueries.responsive(tab)
+        flex-direction: row
+    +mediaQueries.responsive(phone)
+        flex-direction: column
+
     flex-direction: row
     justify-content: center
     align-items: center
@@ -75,7 +92,17 @@ a
         
 .c-quadrants
     display: grid
-    grid-template-columns: 66% 33%
+    +mediaQueries.responsive(big-desktop)
+        grid-template-columns: 66% 33%
+    +mediaQueries.responsive(desktop)
+        grid-template-columns: 66% 33%
+    +mediaQueries.responsive(tab)
+        grid-template-columns: 66% 33%
+        margin: 0%
+    +mediaQueries.responsive(phone)
+        grid-template-columns: 100%
+        margin: 0%
+
 
 
 .title
@@ -97,22 +124,24 @@ a
 .experiences
     +content()
     .experience
-        margin: .5rem 0 .5rem 0
+        margin: .5rem 0rem
         background-color: colors.$pale-a
         padding: 1rem
         .company
-            padding-left: 1rem
-            padding-right: 1rem
-            font-size: 1.6rem
+            +mediaQueries.responsive(phone)
+                font-size: 1.6rem
+            +mediaQueries.responsive(s-phone)
+                font-size: 1.3rem
+           
         .position
             font-weight: bold
-            padding-left: 1rem
-            padding-right: 1rem
-            font-size: 1.3rem
+            +mediaQueries.responsive(phone)
+                font-size: 1.3rem
+            +mediaQueries.responsive(s-phone)
+                font-size: 1.2rem
+        
         .parragraph
             text-align: justify
-            padding-left: 2rem
-            padding-right: 1rem
         .technologies
             +flexbox()
             flex-direction: row
@@ -121,31 +150,7 @@ a
             justify-content: center
             .tech
                 margin: 0px
-               
-           
-.skills
-    +content()
-    .technologies
-        +flexbox()
-        justify-content: center
-        align-items: center
-        flex-wrap: wrap
-        .technology
-            +flexbox()
-            font-size: 1.2rem
-            font-weight: bold
-            margin: .2rem
-            padding: $pad $pad $pad $pad 
-            background-color: colors.$pale-a 
-            justify-content: center
-            align-items: center
-            flex-wrap: wrap
-            .framework
-                flex-direction: row
-                font-size: .8rem
-                font-weight: normal
-                padding-left: .2rem
-            
+                        
 
 .education
     +content()
@@ -177,12 +182,69 @@ a
 
 
 .icons
-    display: grid 
-    grid-template-columns: 25% 25% 25% 25%
+    display: grid
+    +mediaQueries.responsive(big-desktop)
+        grid-template-columns: 25% 25% 25% 25%
+    +mediaQueries.responsive(desktop)
+        grid-template-columns: 25% 25% 25% 25%
+    +mediaQueries.responsive(tab)
+        grid-template-columns: 20% 20% 20% 20% 20%
+    +mediaQueries.responsive(phone)
+        grid-template-columns: repeat(10, 10%)
+    +mediaQueries.responsive(s-phone)
+        grid-template-columns: repeat(10, 10%)
+  
     justify-items: center
     align-items: center
     .icon
-        max-width: 5rem
-        max_height: 5rem
-        min-height: 3rem
-        min-height: 3rem
+        +mediaQueries.responsive(big-desktop)
+            max-height: 7rem
+        +mediaQueries.responsive(desktop)
+            max-height: 5rem
+        +mediaQueries.responsive(tab)
+            max-height: 3rem
+        +mediaQueries.responsive(phone)
+            max-height: 3rem
+        +mediaQueries.responsive(s-phone)
+            max-height: 2.5rem
+
+           
+.skills
+    +content()
+    .technologies
+        +flexbox()
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        .technology
+            +flexbox()
+            
+            font-weight: bold
+            +mediaQueries.responsive(big-desktop)
+                font-size: 2rem
+                margin: .2rem
+                padding: $pad
+            +mediaQueries.responsive(desktop)
+                font-size: 2rem
+                margin: .2rem
+                padding: $pad
+            +mediaQueries.responsive(tab)
+                font-size: 1.6rem
+                margin: .2rem
+                padding: $pad
+            +mediaQueries.responsive(phone)
+                margin: .2rem
+                padding: .2rem
+            +mediaQueries.responsive(s-phone)
+                margin: .1rem
+                padding: .1rem
+            
+            background-color: colors.$pale-a 
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            .framework
+                flex-direction: row
+                font-size: .8rem
+                font-weight: normal
+                padding-left: .2rem
