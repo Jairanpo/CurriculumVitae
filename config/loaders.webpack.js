@@ -137,7 +137,7 @@ var pro = {
                             implementation: require("sass")
                         }
                     }
-                ]
+                ] gi
             }
         ]
     }
