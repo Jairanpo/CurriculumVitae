@@ -154,9 +154,7 @@ function technologies_html(list_of_technologies) {
 function image_tag(list_of_images) {
     var result = "";
     for (var i = 0; i < list_of_images.length; i++) {
-        console.log("Current: ", list_of_images[i]);
         result += `<img class="icon" src="${list_of_images[i]}"/>`;
     }
-    console.log("Tags: ", result);
     return result;
 }
