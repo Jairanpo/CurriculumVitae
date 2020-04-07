@@ -51,7 +51,7 @@ var content = {
             `,
                 description: `<div class="parragraph">
                     Since the begining of my carrer I have been working on several projects
-                    ranging from from web|app|videogames development and as a CG artist. <br>
+                    ranging from web|app|videogames development and as a CG artist. <br>
                     <ul style="margin:0">
                     <li><a href=https://laepocafilm.com target="_blank" rel="noopener noreferrer"/>La Epoca</a></li> 
                     <li><a href=https://www.youtube.com/watch?v=RevcANUqVBg target="_blank" rel="noopener noreferrer">Ghost Apocalypse</a></li>
