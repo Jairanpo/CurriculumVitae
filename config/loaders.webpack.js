@@ -8,7 +8,7 @@ var dev = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(png|jpe?g|mp4)$/,
+                test: /\.(png|jpe?g|mp4|webm)$/,
                 use: [{
                     loader: "file-loader",
                     options: {

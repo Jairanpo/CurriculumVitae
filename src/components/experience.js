@@ -1,23 +1,22 @@
 "use strict";
 
 var content = {
-  experience: {
-    title: {
-      en: `<div class="title">Experience</div>`,
-      sp: "Experiencía"
-    },
-    places: [
-      {
-        place: `<div class="company">
+    experience: {
+        title: {
+            en: `<div class="title">Experience</div>`,
+            sp: "Experiencía"
+        },
+        places: [{
+                place: `<div class="company">
                 Ool Digital: VFX Studio
                 </div>`,
 
-        position: `
+                position: `
                 <div class="position">
                     Technical Director & SysAdmin
                 </div>
             `,
-        description: `<div class="parragraph">
+                description: `<div class="parragraph">
                     I was in charge of creating the data flow among
                     all the deparments involved on the creation of CG
                     content as well as hardware maintenance, network
@@ -28,30 +27,30 @@ var content = {
                         </ul>
                     </div>
                 `,
-        tecnologies: [
-          "Python",
-          "Javascript",
-          "Webpack",
-          "Qt",
-          "MikroTik",
-          "Houdini",
-          "Maya",
-          "Redshift"
-        ]
-      },
+                tecnologies: [
+                    "Python",
+                    "Javascript",
+                    "Webpack",
+                    "Qt",
+                    "MikroTik",
+                    "Houdini",
+                    "Maya",
+                    "Redshift"
+                ]
+            },
 
-      {
-        place: `<div class="company">
+            {
+                place: `<div class="company">
                 Freelancer: 
                 </div>`,
 
-        position: `
+                position: `
                 <div class="position">
                     Software Developer & CG Artist
                 </div>
             `,
-        description: `<div class="parragraph">
-                    Since the beguining of my carrer I have been working on very distinct projects that
+                description: `<div class="parragraph">
+                    Since the begining of my carrer I have been working on very distinct projects that
                     range from web|app|videogames development and as a CG artist. <br>
                     <ul style="margin:0">
                     <li><a href=https://laepocafilm.com target="_blank" rel="noopener noreferrer"/>La Epoca</a></li> 
@@ -60,30 +59,30 @@ var content = {
                     </ul>
                     </div>
                 `,
-        tecnologies: [
-          "Unity",
-          "Python",
-          "Javascript",
-          "Webpack",
-          "Vue",
-          "React",
-          "Houdini",
-          "Blender",
-          "Wordpress"
-        ]
-      },
+                tecnologies: [
+                    "Unity",
+                    "Python",
+                    "Javascript",
+                    "Webpack",
+                    "Vue",
+                    "React",
+                    "Houdini",
+                    "Blender",
+                    "Wordpress"
+                ]
+            },
 
-      {
-        place: `
+            {
+                place: `
                     <div class="company">
                         Talent Network: Technology Events
                     </div>`,
-        position: `
+                position: `
                     <div class="position">
                         Fullstack Developer
                     </div>
                 `,
-        description: `<div class="parragraph">
+                description: `<div class="parragraph">
                     I develop the backend side of a RestAPI service,
                     and deploy the database designed for it. 
                     This service provide information about articles, 
@@ -96,29 +95,29 @@ var content = {
                     </ul>
                     </div>
                 `,
-        tecnologies: [
-          "Python",
-          "Javascript",
-          "Houdini",
-          "Webpack",
-          "Qt",
-          "Mikrotic",
-          "Maya",
-          "Redshift"
-        ]
-      },
+                tecnologies: [
+                    "Python",
+                    "Javascript",
+                    "Houdini",
+                    "Webpack",
+                    "Qt",
+                    "Mikrotic",
+                    "Maya",
+                    "Redshift"
+                ]
+            },
 
-      {
-        place: `
+            {
+                place: `
                     <div class="company">
                         Huevocartoon: CG Film
                     </div>`,
-        position: `
+                position: `
                     <div class="position">
                         Layout Technical Director
                     </div>
                 `,
-        description: `
+                description: `
                 <div class="parragraph">
                     <ul style="margin-top:0">
                         <li>Creating tools for the cinematography team and using several CG and VFX APIs.</li>
@@ -132,28 +131,28 @@ var content = {
                     <ul>
                 </div>
                 `,
-        tecnologies: [
-          "Python",
-          "Qt",
-          "JSON",
-          "Mel",
-          "Maya",
-          "Softimage",
-          "Photoshop",
-          "Illustrator"
-        ]
-      },
-      {
-        place: `
+                tecnologies: [
+                    "Python",
+                    "Qt",
+                    "JSON",
+                    "Mel",
+                    "Maya",
+                    "Softimage",
+                    "Photoshop",
+                    "Illustrator"
+                ]
+            },
+            {
+                place: `
                     <div class="company">
                         Metacube: CG Film
                     </div>`,
-        position: `
+                position: `
                     <div class="position">
                         Layout and Technical Artist
                     </div>
                 `,
-        description: `<div class="parragraph">
+                description: `<div class="parragraph">
                     I collaborate as an artist working on the ciematography for the film Salma's Big Wish,
                     also develop scripts that automate processes for the team.
                     <ul style="margin:0">
@@ -161,10 +160,10 @@ var content = {
                     </ul>
                     </div>
                 `,
-        tecnologies: ["Python", "Maya", "Hiero"]
-      }
-    ]
-  }
+                tecnologies: ["Python", "Maya", "Hiero"]
+            }
+        ]
+    }
 };
 
 var html = /*html*/ `
@@ -179,37 +178,37 @@ module.exports = html;
 /* ====================================================================================== */
 
 function experience(list_of_places) {
-  var result = "";
+    var result = "";
 
-  list_of_places.forEach(function append(element) {
-    result += `<div class="experience">
+    list_of_places.forEach(function append(element) {
+        result += `<div class="experience">
                 ${element.place}
                 ${element.position}
                 ${element.description}
                 ${tecnologies(element.tecnologies, "div", "tech")}
             </div>
         `;
-  });
-  return result;
+    });
+    return result;
 }
 
 function tecnologies(list_of_strings, tag, class_name) {
-  var result = '<div class="technologies">';
-  list_of_strings.forEach(function(element, index) {
-    if (index != list_of_strings.length - 1) {
-      result += `
+    var result = '<div class="technologies">';
+    list_of_strings.forEach(function(element, index) {
+        if (index != list_of_strings.length - 1) {
+            result += `
             <${tag} class=\"${class_name}\">
             ${element + "&nbsp|&nbsp"}
             </${tag}>
         `;
-    } else {
-      result += `
+        } else {
+            result += `
             <${tag} class=${class_name}>
             ${element}
             </${tag}>
         `;
-    }
-  });
-  result += "</div>";
-  return result;
+        }
+    });
+    result += "</div>";
+    return result;
 }

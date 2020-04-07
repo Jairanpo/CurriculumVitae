@@ -6,8 +6,11 @@ import experience from "./components/experience";
 import skills from "./components/skills";
 import education from "./components/education";
 import code_samples from "./components/code_samples";
+import background from "./components/background_video";
 
 var html = /*html*/ `
+
+ 
   <!--------------> 
   
   ${header} 
@@ -27,6 +30,7 @@ var html = /*html*/ `
   <div class="b-left">
   ${code_samples}
 </div>
+${background}
 `;
 
 var div = document.createElement("div");
