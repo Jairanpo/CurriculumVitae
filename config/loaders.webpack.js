@@ -64,13 +64,13 @@ var dev_build = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(png|jpe?g)$/,
+                test: /\.(png|jpe?g|mp4|webm)$/,
                 use: [{
                     loader: "file-loader",
                     options: {
                         esModule: false,
-                        outputPath: "images",
-                        publicPath: "images",
+                        outputPath: "static",
+                        publicPath: "static",
                         name: "[name].[ext]"
                     }
                 }]
@@ -78,12 +78,19 @@ var dev_build = {
             {
                 test: /\.sass$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "resolve-url-loader"
+                    },
                     {
                         loader: "sass-loader",
                         options: {
-                            // Prefer `dart-sass`
                             implementation: require("sass")
                         }
                     }
@@ -100,13 +107,13 @@ var pro = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(png|jpe?g)$/,
+                test: /\.(png|jpe?g|mp4|webm)$/,
                 use: [{
                     loader: "file-loader",
                     options: {
                         esModule: false,
-                        outputPath: "images",
-                        publicPath: "images",
+                        outputPath: "static",
+                        publicPath: "static",
                         name: "[name].[ext]"
                     }
                 }]
@@ -114,12 +121,19 @@ var pro = {
             {
                 test: /\.sass$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "resolve-url-loader"
+                    },
                     {
                         loader: "sass-loader",
                         options: {
-                            // Prefer `dart-sass`
                             implementation: require("sass")
                         }
                     }
